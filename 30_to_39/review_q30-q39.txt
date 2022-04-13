@@ -1,0 +1,28 @@
+MeCabの説明-> https://taku910.github.io/mecab/
+
+35
+・baseじゃなくてsurfaceで見る
+基本形(base)が"*"になっているケースもある（"ピサゴラス"などの出現頻度がメチャクチャ低い単語）ので、出現する単語はsurfaceで数えることにした（そのため同じbaseを持っていても活用形が異なれば別の単語としてカウントされている）
+
+・辞書型のキーと値の取り出し
+items()やkeys()、values()といった形で取り出せる。dict_なんちゃら型という特殊な型で返ってくるが、リスト型の引数に渡すことでリストとして取得できる。
+
+>>> A = {'a':1, 'b':2}
+>>> A.items()
+dict_items([('a', 1), ('b', 2)])
+>>> list(A.items())
+[('a', 1), ('b', 2)]
+>>> A.keys()
+dict_keys(['a', 'b'])
+>>> A.values()
+dict_values([1, 2])
+
+・辞書型のソート
+上の方法を用いれば、値でソートすることが可能になる。
+>>> A = {"a":3, "b":1, "c":2}
+>>> sorted(A.items(), key = lambda x: x[1], reverse = True)
+[('a', 3), ('c', 2), ('b', 1)]
+
+36
+Matplotlibのラベルに日本語を表示する
+https://ricrowl.hatenablog.com/entry/2020/09/14/032424
