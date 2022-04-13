@@ -1,0 +1,18 @@
+Q5
+・N-gram:テキストをn個のまとまりに分ける
+(例): I am happy
+文字単位の1-gram(unigram) -> "I", " ", "a", "m", " ", "h", "a", "p", "p", "y"
+単語単位の2-gram(bigram) -> [["I", "am"], ["am", "happy"]]
+
+・split -> split()で空白区切り、split(',')でコンマ区切り
+
+
+
+Q8
+・ord('a') -> 97
+・chr(97) -> 'a'
+
+
+
+Q9
+・random.shuffle(list) -> listの要素をランダムに並び替え
